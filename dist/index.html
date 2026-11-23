@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sofia Kammarkör – konserter, nyheter och kontakt. Preliminär designversion.">
+  <title>Sofia Kammarkör</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#innehall">Hoppa till innehållet</a>
+  <header class="site-header">
+    <a class="wordmark" href="#hem" aria-label="Sofia Kammarkör, till toppen">Sofia Kammarkör</a>
+    <nav aria-label="Huvudmeny">
+      <a href="#aktuellt">Aktuellt</a>
+      <a href="#om-oss">Om oss</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="innehall">
+    <!-- Byt bilden i bilder/korbild.png mot ett eget foto när det finns. -->
+    <section class="hero" id="hem" aria-labelledby="sidrubrik">
+      <img class="hero-image" src="bilder/korbild.png" alt="AI-genererad exempelbild av en kör som sjunger i en kyrka. Bilden föreställer inte Sofia Kammarkör." width="1536" height="1024" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Välkommen till</p>
+        <h1 id="sidrubrik">Sofia Kammarkör</h1>
+        <p class="hero-subtitle">Musik som berör.</p>
+        <a class="button button-light" href="#aktuellt">Våra konserter</a>
+      </div>
+      <span class="image-note">Tillfällig AI-genererad exempelbild</span>
+    </section>
+
+    <section class="concert section-wrap" id="aktuellt" aria-labelledby="aktuellt-rubrik">
+      <p class="eyebrow" id="aktuellt-rubrik">Aktuellt · Nästa konsert</p>
+      <h2>Vi ses i musiken.</h2>
+      <p class="lead">Här hittar du snart vår nästa konsert.</p>
+      <p>Datum, plats och program kommer när konserten är bokad.</p>
+      <details class="concert-details">
+        <summary>Konsertinformation</summary>
+        <div class="details-content">
+          <p>Ingen konsert är inlagd i den här preliminära versionen ännu.</p>
+          <p>Här kan vi senare visa program, tider, vägbeskrivning och en länk till biljetter.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="about section-wrap" id="om-oss" aria-labelledby="om-rubrik">
+      <div class="about-heading">
+        <p class="eyebrow">Människorna bakom musiken</p>
+        <h2 id="om-rubrik">Om oss</h2>
+        <span class="accent-line" aria-hidden="true"></span>
+      </div>
+      <div class="about-copy">
+        <p class="large-copy">Många röster.<br>En gemensam klang.</p>
+        <p>Välkommen till Sofia Kammarkör. Här kommer du att kunna läsa om kören, vår musik och människorna som skapar den.</p>
+        <p class="placeholder-note">Texten är ett förslag. Vi fyller på med er egen presentation, information om dirigenten och det ni vill berätta.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt" aria-labelledby="kontakt-rubrik">
+      <div class="section-wrap contact-inner">
+        <div>
+          <p class="eyebrow">Hör av dig</p>
+          <h2 id="kontakt-rubrik">Kontakt</h2>
+        </div>
+        <div class="contact-copy">
+          <h3>Vill du komma i kontakt med oss?</h3>
+          <p>För frågor om kören, konserter eller ett framtida samarbete.</p>
+          <!-- Lägg till en riktig e-postlänk här när adressen är bekräftad. -->
+          <p class="contact-placeholder">Körens e-postadress läggs in här.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="wordmark" href="#hem">Sofia Kammarkör</a>
+    <p>Preliminär version · innehåll och bilder är exempel</p>
+    <a href="#hem">Till toppen</a>
+  </footer>
+</body>
+</html>

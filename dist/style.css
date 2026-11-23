@@ -1,0 +1,92 @@
+/* Grundfärgerna ändras här och används sedan på hela sidan. */
+:root {
+  --paper: #faf7f2;
+  --ink: #292724;
+  --wine: #651c2c;
+  --wine-dark: #48101d;
+  --muted: #675f59;
+  --line: #d9d0c7;
+  --rose: #eee3dd;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; font-size: 1rem; line-height: 1.7; }
+a { color: inherit; text-underline-offset: .3em; }
+a:hover { color: var(--wine); }
+a:focus-visible, summary:focus-visible { outline: 3px solid #ab714b; outline-offset: 6px; }
+h1, h2, h3, .large-copy { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; line-height: 1.12; }
+h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin: 0 0 1.25rem; letter-spacing: -.035em; }
+h3 { font-size: clamp(1.65rem, 3vw, 2.2rem); margin: 0 0 1rem; }
+p { margin: 0 0 1rem; }
+.section-wrap { width: min(1120px, calc(100% - 6rem)); margin-inline: auto; }
+.eyebrow { font-size: .875rem; font-weight: 500; letter-spacing: .17em; text-transform: uppercase; color: var(--wine); }
+.skip-link { position: absolute; top: -120px; left: 1rem; z-index: 20; padding: .8rem; background: white; }
+.skip-link:focus { top: 1rem; }
+
+/* Sidhuvud och meny */
+.site-header { min-height: 100px; padding: 1.5rem 4.5%; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.wordmark { font-family: Georgia, 'Times New Roman', serif; text-transform: uppercase; letter-spacing: .13em; font-size: 1.15rem; text-decoration: none; color: var(--wine); }
+nav { display: flex; gap: 2rem; }
+nav a { text-decoration: none; font-size: .95rem; }
+nav a:hover { text-decoration: underline; }
+
+/* Stor bild och introduktion. Bilden är ett eget HTML-element. */
+.hero { position: relative; min-height: 630px; height: min(760px, 78vh); isolation: isolate; overflow: hidden; background: #40352f; }
+.hero-image, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+.hero-image { object-fit: cover; object-position: center 62%; }
+.hero-shade { background: linear-gradient(180deg, rgba(21,15,15,.48), rgba(21,15,15,.13) 52%, rgba(21,15,15,.24)); }
+.hero-copy { color: white; text-align: center; padding: 3.75rem 1.5rem 1rem; }
+.hero-copy .eyebrow { color: white; margin-bottom: .7rem; }
+h1 { font-size: clamp(3rem, 6.4vw, 6.5rem); margin: 0; letter-spacing: -.04em; text-wrap: balance; }
+.hero-subtitle { font: 400 clamp(1.4rem, 2.4vw, 2rem)/1.5 Georgia, serif; margin: .75rem 0 1.5rem; }
+.button { display: inline-block; text-decoration: none; padding: .7rem 1.7rem; font-size: .95rem; }
+.button-light { color: white; border: 1px solid rgba(255,255,255,.8); background: rgba(30,15,15,.24); }
+.button-light:hover { color: var(--wine); background: var(--paper); }
+.image-note { position: absolute; bottom: 1rem; right: 1.5rem; color: white; background: rgba(0,0,0,.62); padding: .2rem .6rem; font-size: .75rem; }
+
+/* Aktuellt */
+.concert { text-align: center; padding-block: 5rem; border-bottom: 1px solid var(--line); }
+.concert .lead { font-size: 1.2rem; margin-bottom: .3rem; }
+.concert > p:not(.eyebrow) { color: var(--muted); }
+.concert-details { max-width: 580px; margin: 1.8rem auto 0; }
+summary { cursor: pointer; background: var(--wine); color: white; padding: .75rem 1.5rem; width: fit-content; margin-inline: auto; }
+summary:hover { background: var(--wine-dark); }
+.details-content { margin-top: 1.5rem; padding: 1.5rem; border: 1px solid var(--line); text-align: left; }
+.details-content p:last-child { margin-bottom: 0; }
+
+/* Om oss */
+.about { padding-block: 5.5rem; display: grid; grid-template-columns: 1fr 1.15fr; gap: 5rem; }
+.accent-line { display: block; height: 2px; width: 65px; background: var(--wine); margin-top: 2rem; }
+.large-copy { font-size: clamp(2rem, 3.4vw, 3rem); margin-bottom: 1.5rem; }
+.about-copy > p:not(.large-copy) { max-width: 52ch; color: var(--muted); }
+.placeholder-note { font-size: .9rem; border-left: 2px solid var(--line); padding-left: 1rem; }
+
+/* Kontakt och sidfot */
+.contact { background: var(--rose); }
+.contact-inner { display: grid; grid-template-columns: 1fr 1.15fr; gap: 5rem; padding-block: 4.5rem; }
+.contact-copy { padding-top: .4rem; }
+.contact-placeholder { display: inline-block; color: var(--wine); border-bottom: 1px solid var(--wine); padding-bottom: .35rem; margin-top: .5rem; }
+.site-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 2rem; }
+.site-footer .wordmark { font-size: .95rem; }
+.site-footer p { margin: 0; font-size: .8rem; color: var(--muted); }
+.site-footer > a:last-child { font-size: .875rem; }
+
+/* Anpassningar för mindre skärmar */
+@media (max-width: 700px) {
+  .site-header { flex-direction: column; gap: .75rem; padding: 1.2rem; }
+  .wordmark { font-size: 1rem; }
+  nav { gap: 1.7rem; }
+  .section-wrap { width: calc(100% - 2.5rem); }
+  .hero { min-height: 560px; height: 74svh; max-height: 700px; }
+  .hero-copy { padding-top: 2.5rem; }
+  .hero-image { object-position: 48% center; }
+  .hero-copy .eyebrow { font-size: .8rem; }
+  .hero-subtitle { margin-bottom: 1rem; }
+  .image-note { right: .75rem; bottom: .75rem; }
+  .concert { padding-block: 3.5rem; }
+  .about, .contact-inner { grid-template-columns: 1fr; gap: 2rem; padding-block: 3.5rem; }
+  .about-heading .accent-line { margin-top: 1rem; }
+  .site-footer { flex-direction: column; align-items: flex-start; gap: .8rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
