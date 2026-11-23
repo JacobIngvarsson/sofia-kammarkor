@@ -1,0 +1,12 @@
+# Lokala inställningar och tillfälliga filer
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/
+*.log
+.env
+.env.*
+!.env.example
+
+# Separat inställning för Sites-publicering
+.openai/
