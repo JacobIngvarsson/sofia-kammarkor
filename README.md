@@ -2,7 +2,15 @@
 
 En första version av en enkel hemsida för Sofia Kammarkör. Sidan består av en enda sida med avsnitten Aktuellt, Om oss och Kontakt.
 
-## Öppna sidan
+## Förhandsgranska i webbläsaren
+
+**[Öppna hemsidan](https://jacobingvarsson.github.io/sofia-kammarkor/)**
+
+Länken är offentlig och kräver varken GitHub-konto, nedladdning eller VS Code. Det är ett preliminärt designutkast med exempelbild och platshållartexter.
+
+Förhandsvisningen publiceras via GitHub Pages från `main` och uppdateras automatiskt efter att ändringar har sparats där. Publiceringen kan ta några minuter.
+
+## Öppna och ändra sidan lokalt
 
 1. Ladda ner projektet med **Code → Download ZIP** på GitHub och packa upp filen, eller klona projektet med Git.
 2. Öppna projektmappen i VS Code.
@@ -35,4 +43,8 @@ dist/
 
 Skapa gärna en issue för förslag eller fel. Gör kodändringar i en egen branch och öppna en pull request, så kan ändringarna granskas innan de läggs in i `main`.
 
-GitHub-projektet är en separat kopia av utkastets källkod. Att pusha hit uppdaterar inte automatiskt den tidigare privata förhandsvisningen. Publicering eller automatisk driftsättning kan kopplas på senare.
+GitHub Pages visar den senaste publicerade versionen från `main`. Ändringar i en annan branch syns först när de har slagits ihop till `main`.
+
+Den tidigare privata förhandsvisningen i Sites uppdateras separat och följer inte ändringarna i detta repository.
+
+`index.html` i projektets rot leder besökaren till den riktiga sidan i `dist/`. Filen `.nojekyll` gör att GitHub Pages publicerar filerna utan Jekyll-bearbetning. Publiceringskälla under **Settings → Pages**: `main`, `/ (root)`.
